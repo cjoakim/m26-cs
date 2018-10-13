@@ -125,17 +125,31 @@ RunWalkCalc - proj time: 04:15:00
 - https://github.com/cjoakim/m26
 - https://rubygems.org/gems/m26/versions/1.0.1
 
-## Test Results
-
-```
-Total tests: 75. Passed: 75. Failed: 0. Skipped: 0.
-Test Run Successful.
-```
-
 ## Project Creation
 
 ```
 [~/github/m26-cs/M26/Joakimsoftware.M26]$ dotnet new classlib
 [~/github/m26-cs/M26/Joakimsoftware.M26.Tests]$ dotnet new xunit
 [~/github/m26-cs/M26/Joakimsoftware.M26.Example]$ dotnet new console
+```
+
+## Publishing to NuGet
+
+```
+$ ./test.sh
+...
+Total tests: 75. Passed: 75. Failed: 0. Skipped: 0.
+Test Run Successful.
+
+$ dotnet pack
+...
+  Successfully created package '.../m26-cs/M26/Joakimsoftware.M26/bin/Debug/Joakimsoftware.M26.1.0.0.nupkg'.
+ ...
+
+$ dotnet nuget push bin/Debug/Joakimsoftware.M26.1.0.0.nupkg -k $NUGET_M26_KEY -s https://api.nuget.org/v3/index.json
+
+info : Pushing Joakimsoftware.M26.1.0.0.nupkg to 'https://www.nuget.org/api/v2/package'...
+info :   PUT https://www.nuget.org/api/v2/package/
+info :   Created https://www.nuget.org/api/v2/package/ 1055ms
+info : Your package was pushed.
 ```
