@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joakimsoft.M26", "Joakimsoft.M26.csproj", "{166E23EA-5D0E-48F7-8734-EFC62B7A308F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Joakimsoft.M26.Tests", "..\Joakimsoft.M26.Tests\Joakimsoft.M26.Tests.csproj", "{2A940CD1-D2A1-4A15-9D3E-D464A6EABAC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{166E23EA-5D0E-48F7-8734-EFC62B7A308F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166E23EA-5D0E-48F7-8734-EFC62B7A308F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166E23EA-5D0E-48F7-8734-EFC62B7A308F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166E23EA-5D0E-48F7-8734-EFC62B7A308F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A940CD1-D2A1-4A15-9D3E-D464A6EABAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A940CD1-D2A1-4A15-9D3E-D464A6EABAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A940CD1-D2A1-4A15-9D3E-D464A6EABAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A940CD1-D2A1-4A15-9D3E-D464A6EABAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
