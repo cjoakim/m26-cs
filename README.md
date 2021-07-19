@@ -1,6 +1,12 @@
 # m26-cs
 
-The **m26** library for running, cycling, and swimming calculations; ported to C# and DotNet Core.
+The **m26** library for running, cycling, and swimming calculations; implemented in C# and DotNet Core.
+
+The current version, 2.0.0, targets the **net5.0** framework.
+
+## Links
+- M26 at NuGet: https://www.nuget.org/packages/Joakimsoftware.M26/
+- This repository: https://github.com/cjoakim/m26-cs
 
 ## Usage
 
@@ -14,6 +20,7 @@ using System;
 using Joakimsoftware.M26;
 
 namespace Joakimsoftware.M26.Example {
+
     class Program {
 
         static void Main(string[] args) {
@@ -88,68 +95,73 @@ The above code produces the following output:
 
 ```
 $ dotnet run
-
 M26 Examples Program
 Distance - miles:        26.2
 Distance - kilometers:   42.1648128
 Distance - yards:        46112
 ElapsedTime - secs:      13650
-ElapsedTime - hours:     3.79166666666667
+ElapsedTime - hours:     3.7916666666666665
 ElapsedTime - hhmmss:    03:47:30
 Speed - mph:             6.90989010989011
-Speed - kph:             11.120390189011
-Speed - yph:             12161.4065934066
-Speed - secondsPerMile:  520.992366412214
+Speed - kph:             11.120390189010989
+Speed - yph:             12161.406593406595
+Speed - secondsPerMile:  520.9923664122138
 Speed - pacePerMile:     08:40.99
 Speed projected to 31m:  04:29:10
 Speed projected to 31m:  04:31:54
 age-graded to 61.05:     04:14:11
-RunWalkCalc - mph:       6.16438356164384
+RunWalkCalc - mph:       6.164383561643836
 RunWalkCalc - proj time: 04:15:00
 ```
 
-## Other Implementations
+## Version History
 
-### Python
+| Version  |    Date    | Target Framework |
+| -------- | ---------- | ---------------- |
+|  2.0.0   | 2021/07/19 |      net5.0      |
+|  1.0.0   | 2018/10/13 |  netstandard2.0  |
 
-- https://github.com/cjoakim/m26-py
-- https://pypi.org/project/m26/
-
-### Node.js
-
-- https://github.com/cjoakim/m26-js
-- https://www.npmjs.com/package/m26-js
-
-### Ruby
-
-- https://github.com/cjoakim/m26
-- https://rubygems.org/gems/m26/versions/1.0.1
 
 ## Project Creation
 
-```
-[~/github/m26-cs/M26/Joakimsoftware.M26]$ dotnet new classlib
-[~/github/m26-cs/M26/Joakimsoftware.M26.Tests]$ dotnet new xunit
-[~/github/m26-cs/M26/Joakimsoftware.M26.Example]$ dotnet new console
-```
+See **project_creation.sh** in the root of this repository which used the
+dotnet CLI to create the solution with three subprojects.
 
 ## Publishing to NuGet
 
 ```
 $ ./test.sh
 ...
-Total tests: 75. Passed: 75. Failed: 0. Skipped: 0.
-Test Run Successful.
+Passed!  - Failed:     0, Passed:    75, Skipped:     0, Total:    75, Duration: 31 ms
 
 $ dotnet pack
 ...
-  Successfully created package '.../m26-cs/M26/Joakimsoftware.M26/bin/Debug/Joakimsoftware.M26.1.0.0.nupkg'.
- ...
+  Successfully created package '.../m26-cs/M26/Joakimsoftware.M26/bin/Debug/Joakimsoftware.M26.2.0.0.nupkg'.
+...
 
-$ dotnet nuget push bin/Debug/Joakimsoftware.M26.1.0.0.nupkg -k $NUGET_M26_KEY -s https://api.nuget.org/v3/index.json
+$ dotnet nuget push bin/Debug/Joakimsoftware.M26.2.0.0.nupkg -k $NUGET_M26_KEY -s https://api.nuget.org/v3/index.json
 
 info : Pushing Joakimsoftware.M26.1.0.0.nupkg to 'https://www.nuget.org/api/v2/package'...
 info :   PUT https://www.nuget.org/api/v2/package/
 info :   Created https://www.nuget.org/api/v2/package/ 1055ms
 info : Your package was pushed.
 ```
+
+---
+
+## M26 Implementations in other programming languages
+
+### Python
+
+- https://pypi.org/project/m26/
+- https://github.com/cjoakim/m26-py
+
+### Node.js
+
+- https://www.npmjs.com/package/m26-js
+- https://github.com/cjoakim/m26-js
+
+### Ruby
+
+- https://rubygems.org/gems/m26/versions/1.0.1
+- https://github.com/cjoakim/m26
