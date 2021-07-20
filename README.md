@@ -130,6 +130,8 @@ dotnet CLI to create the solution with three subprojects.
 ## Publishing to NuGet
 
 ```
+$ dotnet build
+
 $ ./test.sh
 ...
 Passed!  - Failed:     0, Passed:    75, Skipped:     0, Total:    75, Duration: 31 ms
@@ -139,12 +141,16 @@ $ dotnet pack
   Successfully created package '.../m26-cs/M26/Joakimsoftware.M26/bin/Debug/Joakimsoftware.M26.2.0.0.nupkg'.
 ...
 
+
 $ dotnet nuget push bin/Debug/Joakimsoftware.M26.2.0.0.nupkg -k $NUGET_M26_KEY -s https://api.nuget.org/v3/index.json
 
-info : Pushing Joakimsoftware.M26.1.0.0.nupkg to 'https://www.nuget.org/api/v2/package'...
-info :   PUT https://www.nuget.org/api/v2/package/
-info :   Created https://www.nuget.org/api/v2/package/ 1055ms
-info : Your package was pushed.
+Pushing Joakimsoftware.M26.2.0.0.nupkg to 'https://www.nuget.org/api/v2/package'...
+  PUT https://www.nuget.org/api/v2/package/
+
+warn : All published packages should have license information specified. Learn more: https://aka.ms/deprecateLicenseUrl.
+  Created https://www.nuget.org/api/v2/package/ 705ms
+
+Your package was pushed.
 ```
 
 ---
