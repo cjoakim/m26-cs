@@ -153,6 +153,23 @@ warn : All published packages should have license information specified. Learn m
 Your package was pushed.
 ```
 
+## Package Description
+
+```
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Joakimsoftware.M26</id>
+    <version>2.0.0</version>
+    <authors>Chris Joakim</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+</package>
+```
+
 ---
 
 ## M26 Implementations in other programming languages
